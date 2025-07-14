@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodly_app/constants/constants.dart';
+import 'package:foodly_app/views/entrypoint.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:shimmer/main.dart';
 
-Widget defaultHome = const MyHomePage(title: "Hello World");
+Widget defaultHome = MainScreen();
 void main() {
   runApp(const MyApp());
 }
