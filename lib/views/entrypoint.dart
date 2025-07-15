@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/controllers/tab_index_controller.dart';
+import 'package:foodly_app/views/cart/cart_page.dart';
+import 'package:foodly_app/views/home/home_page.dart';
+import 'package:foodly_app/views/profile/profile_page.dart';
+import 'package:foodly_app/views/search/search_page.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
+// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  MainScreen({super.key});
 
+  List<Widget> pageList = [HomePage(), SearchPage(), CartPage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(TabIndexController());
@@ -16,7 +22,7 @@ class MainScreen extends StatelessWidget {
       () => Scaffold(
         body: Stack(
           children: [
-            Container(height: hieght, width: width, color: kPrimary),
+            pageList[controller.tabIndex],
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
