@@ -4,9 +4,8 @@ import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/views/entrypoint.dart';
 
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:shimmer/main.dart';
 
-Widget defaultHome = const MainScreen();
+Widget defaultHome = MainScreen();
 
 void main() {
   runApp(const MyApp());
