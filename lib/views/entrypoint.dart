@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/controllers/tab_index_controller.dart';
-import 'package:foodly_app/views/cart/cart_page.dart';
-import 'package:foodly_app/views/home/home_page.dart';
-import 'package:foodly_app/views/profile/profile_page.dart';
-import 'package:foodly_app/views/search/search_page.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/state_manager.dart';
 
-// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
-  MainScreen({super.key});
+  const MainScreen({super.key});
 
-  List<Widget> pageList = [HomePage(), SearchPage(), CartPage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(TabIndexController());
@@ -22,7 +15,7 @@ class MainScreen extends StatelessWidget {
       () => Scaffold(
         body: Stack(
           children: [
-            pageList[controller.tabIndex],
+            Container(height: height, width: width, color: kPrimary),
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
@@ -38,26 +31,22 @@ class MainScreen extends StatelessWidget {
                     controller.setTabIndex(value);
                   },
                   currentIndex: controller.tabIndex,
-                  items: [
+                  items: const [
                     BottomNavigationBarItem(
-                      icon: controller.tabIndex == 0
-                          ? const Icon(AntDesign.appstore1)
-                          : const Icon(AntDesign.appstore_o),
-                      label: 'Home',
-                    ),
-                    const BottomNavigationBarItem(
-                      icon: Badge(label: Text('1'), child: Icon(Icons.search)),
-                      label: 'Search',
-                    ),
-                    const BottomNavigationBarItem(
-                      icon: Icon(FontAwesome.opencart),
-                      label: 'Cart',
+                      icon: Icon(Icons.home),
+                      label: "Home",
                     ),
                     BottomNavigationBarItem(
-                      icon: controller.tabIndex == 3
-                          ? const Icon(FontAwesome.user_circle)
-                          : const Icon(FontAwesome.user_circle_o),
-                      label: 'Profile',
+                      icon: Icon(Icons.search),
+                      label: "Search",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.shopping_cart),
+                      label: "Cart",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.person),
+                      label: "Profile",
                     ),
                   ],
                 ),
