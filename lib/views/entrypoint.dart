@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/controllers/tab_index_controller.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -10,44 +12,53 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(TabIndexController());
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(height: hieght, width: width, color: kPrimary),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Theme(
-              data: Theme.of(context).copyWith(canvasColor: kPrimary),
-              child: BottomNavigationBar(
-                showSelectedLabels: false,
-                showUnselectedLabels: false,
-                unselectedIconTheme: const IconThemeData(color: Colors.black38),
-                selectedIconTheme: const IconThemeData(color: kSecondary),
-                onTap: (value) {
-                  print(value);
-                },
-                items: const [
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.home),
-                    label: 'Home',
+    return Obx(
+      () => Scaffold(
+        body: Stack(
+          children: [
+            Container(height: hieght, width: width, color: kPrimary),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Theme(
+                data: Theme.of(context).copyWith(canvasColor: kPrimary),
+                child: BottomNavigationBar(
+                  showSelectedLabels: false,
+                  showUnselectedLabels: false,
+                  unselectedIconTheme: const IconThemeData(
+                    color: Colors.black38,
                   ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.search),
-                    label: 'Search',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.shopping_cart),
-                    label: 'Cart',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
-                    label: 'Profile',
-                  ),
-                ],
+                  selectedIconTheme: const IconThemeData(color: kSecondary),
+                  onTap: (value) {
+                    controller.setTabIndex(value);
+                  },
+                  currentIndex: controller.tabIndex,
+                  items: [
+                    BottomNavigationBarItem(
+                      icon: controller.tabIndex == 0
+                          ? const Icon(AntDesign.appstore1)
+                          : const Icon(AntDesign.appstore_o),
+                      label: 'Home',
+                    ),
+                    const BottomNavigationBarItem(
+                      icon: Badge(label: Text('1'), child: Icon(Icons.search)),
+                      label: 'Search',
+                    ),
+                    const BottomNavigationBarItem(
+                      icon: Icon(FontAwesome.opencart),
+                      label: 'Cart',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: controller.tabIndex == 3
+                          ? const Icon(FontAwesome.user_circle)
+                          : const Icon(FontAwesome.user_circle_o),
+                      label: 'Profile',
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
