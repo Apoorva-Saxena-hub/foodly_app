@@ -4,7 +4,7 @@ List<dynamic> categories = [
     "title": "Fried Rice",
     "value": "fried_rice",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/4a4cd06e-94de-4478-8588-66eee01354d4-rice.png",
+        "https://www.jessicagavin.com/wp-content/uploads/2018/09/fried-rice-8-1200.jpg",
     "createdAt": "2023-10-24T16:12:23.571Z",
     "updatedAt": "2023-10-24T16:12:23.571Z",
     "__v": 0,
@@ -14,7 +14,7 @@ List<dynamic> categories = [
     "title": "Curry",
     "value": "curry",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/ee2d952c-1d7d-48f7-81b3-cb967343eb6c-curry.png",
+        "https://tse2.mm.bing.net/th/id/OIP.FUELuQpb7iRIe20qRCRGVwHaK1?rs=1&pid=ImgDetMain&o=7&rm=3",
     "__v": 0,
   },
   {
@@ -22,7 +22,7 @@ List<dynamic> categories = [
     "title": "Pizza",
     "value": "pizza",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/466693e6-f999-42e0-8794-09325ece1b45-Pizza.png",
+        "https://tse2.mm.bing.net/th/id/OIP.NDwh0NwSpDy9l-_ThJBidgHaHA?w=768&h=727&rs=1&pid=ImgDetMain&o=7&rm=3",
     "__v": 0,
   },
   {
@@ -30,7 +30,7 @@ List<dynamic> categories = [
     "title": "Pasta",
     "value": "pasta",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/6645cf41-bc89-4dd0-9f80-bba9487633b2-Spaghetti.png",
+        "https://foodhub.scene7.com/is/image/woolworthsltdprod/Easy-chicken-and-bacon-pasta:Mobile-1300x1150",
     "__v": 0,
   },
   {
@@ -38,7 +38,7 @@ List<dynamic> categories = [
     "title": "Beverages",
     "value": "beverages",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/93c4b3df-9e55-4308-a834-9fe4ad67c0b3-bar.png",
+        "https://tse3.mm.bing.net/th/id/OIP.1O0zxQtamAkxf7OAW0mEkAHaG1?rs=1&pid=ImgDetMain&o=7&rm=3",
     "__v": 0,
   },
   {
@@ -46,15 +46,14 @@ List<dynamic> categories = [
     "title": "Burgers",
     "value": "burgers",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/3c94bc09-b8b9-4961-accb-f68b7e8121cc-Hamburger.png",
+        "https://brookrest.com/wp-content/uploads/2020/05/AdobeStock_282247995-scaled.jpeg",
     "__v": 0,
   },
   {
     "_id": "65310efb81e4d98d60b093c3",
     "title": "Chicken",
     "value": "chicken",
-    "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/139718b2-2832-40c5-8d7b-11fd9feb0aac-chicken.png",
+    "imageUrl": "https://images6.alphacoders.com/439/thumb-1920-439410.jpg",
     "__v": 0,
   },
   {
@@ -62,7 +61,7 @@ List<dynamic> categories = [
     "title": "More",
     "value": "more",
     "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/08323562-a3c6-461d-95a3-b3817c99871b-more.png",
+        "https://icon-library.com/images/more-icon-png/more-icon-png-16.jpg",
     "__v": 0,
   },
 ];
