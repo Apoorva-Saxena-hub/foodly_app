@@ -66,17 +66,15 @@ List<dynamic> categories = [
   },
 ];
 
-const restaurants = [
+List<dynamic> restaurants = [
   {
     "_id": "6530ebbcc9e72013e5b65933",
     "title": "Lapisara Eatery",
     "time": "6:00am - 9:00pm",
-    "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "imageUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "owner": "fdfsdfsdfs",
     "code": "41007428",
-    "logoUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "logoUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "rating": 5,
     "ratingCount": "6765",
     "coords": {
@@ -93,12 +91,10 @@ const restaurants = [
     "_id": "6530ea6bc9e72013e5b6592d",
     "title": "Burger King",
     "time": "6:00am - 9:00pm",
-    "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "imageUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "owner": "sjgdsjgfjshhjs",
     "code": "41007428",
-    "logoUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "logoUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "rating": 5,
     "ratingCount": "3278",
     "coords": {
@@ -115,12 +111,10 @@ const restaurants = [
     "_id": "6530eb66c9e72013e5b65931",
     "title": "La Foods",
     "time": "6:00am - 9:00pm",
-    "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "imageUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "owner": "fgdgdfgd",
     "code": "41007428",
-    "logoUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "logoUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "rating": 5,
     "ratingCount": "5666",
     "coords": {
@@ -137,12 +131,10 @@ const restaurants = [
     "_id": "6530eb23c9e72013e5b6592f",
     "title": "Italian Restaurant",
     "time": "6:00am - 9:00pm",
-    "imageUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "imageUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "owner": "sjgdsjgfjshhjs",
     "code": "41007428",
-    "logoUrl":
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+    "logoUrl": "https://wallpaperaccess.com/full/3692914.jpg",
     "rating": 5,
     "ratingCount": "3278",
     "coords": {
@@ -320,7 +312,7 @@ List<Map<String, dynamic>> foods = [
   },
 ];
 
-const cart = [
+List<dynamic> cart = [
   {
     "_id": "653b6588541d2aa2c1e89cd1",
     "userId": "6537a4448cd1bd140ebddcee",
@@ -355,7 +347,7 @@ const profile = {
   "updatedAt": "2023-10-24T11:02:28.215Z",
 };
 
-const choicesList = [
+List<dynamic> choicesList = [
   {"id": 1, "name": "Pick Up", "value": "pickup"},
   {"id": 2, "name": "4 Star", "value": "4star"},
   {"id": 3, "name": "3 Star", "value": "3star"},
