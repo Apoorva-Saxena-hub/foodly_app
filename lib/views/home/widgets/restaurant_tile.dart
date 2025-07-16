@@ -7,7 +7,7 @@ import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/views/home/widgets/restaurant.dart';
 
 class RestaurantTile extends StatelessWidget {
-  RestaurantTile({super.key, this.restaurant});
+  RestaurantTile({super.key, required this.restaurant});
 
   // ignore: prefer_typing_uninitialized_variables
   final dynamic restaurant;
