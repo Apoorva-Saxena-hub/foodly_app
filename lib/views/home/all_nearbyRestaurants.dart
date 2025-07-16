@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly_app/common/app_style.dart';
+import 'package:foodly_app/common/background_container.dart';
 import 'package:foodly_app/common/reusable_text.dart';
 import 'package:foodly_app/constants/constants.dart';
 
@@ -17,7 +18,7 @@ class AllNearByRestaurants extends StatelessWidget {
           style: appStyle(13, kGray, FontWeight.w600),
         ),
       ),
-      body: const Center(child: Text("All nearby restaurants")),
+      body: BackgroundContainer(color: Colors.white, child: Container()),
     );
   }
 }

@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
-                data: Theme.of(context).copyWith(canvasColor: kPrimary),
+                data: Theme.of(context).copyWith(canvasColor: kGray),
                 child: BottomNavigationBar(
                   showSelectedLabels: false,
                   showUnselectedLabels: false,
