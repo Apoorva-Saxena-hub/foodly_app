@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:foodly_app/constants/uidata.dart';
 
-import 'package:foodly_app/views/home/widgets/widgets.dart';
+import 'package:foodly_app/views/home/widgets/category_widget.dart';
 
 class Category extends StatelessWidget {
   const Category({super.key});

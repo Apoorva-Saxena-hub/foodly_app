@@ -5,7 +5,7 @@ import 'package:foodly_app/common/background_container.dart';
 import 'package:foodly_app/common/reusable_text.dart' show ReusableText;
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/constants/uidata.dart';
-import 'package:foodly_app/views/home/widgets/restaurant.dart';
+import 'package:foodly_app/views/home/widgets/restaurant_widget.dart';
 import 'package:foodly_app/views/home/widgets/restaurant_tile.dart';
 
 class AllNearByRestaurants extends StatelessWidget {
