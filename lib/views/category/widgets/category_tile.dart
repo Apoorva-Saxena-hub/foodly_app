@@ -24,10 +24,10 @@ class CategoryTile extends StatelessWidget {
       leading: CircleAvatar(
         radius: 18.r,
         backgroundColor: kGrayLight,
-        child: Image.network(category["imageUrl"], fit: BoxFit.contain),
+        child: Image.network(category.imageUrl, fit: BoxFit.contain),
       ),
       title: ReusableText(
-        text: category['title'],
+        text: category.title,
         style: appStyle(12, kGray, FontWeight.normal),
       ),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: kGray, size: 15.r),

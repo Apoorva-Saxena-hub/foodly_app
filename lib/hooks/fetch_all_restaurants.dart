@@ -5,7 +5,7 @@ import 'package:foodly_app/models/categories.dart';
 import 'package:foodly_app/models/hook_model/hook_result.dart';
 import 'package:http/http.dart' as http;
 
-FetchHook useFetchAllCategories() {
+FetchHook useFetchAllRestaurants() {
   final CategoriesItems = useState<List<CategoryModel>?>(null);
   final isLoading = useState<bool>(false);
   final error = useState<Exception?>(null);
