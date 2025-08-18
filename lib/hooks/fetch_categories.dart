@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 FetchHook useFetchCategories() {
-  final categoriesItems = useState<List<CategoryModel>?>(null);
+  final categoriesItems = useState<List<CategoryModel>>([]);
   final isLoading = useState<bool>(false);
   final error = useState<Exception?>(null);
   final apiError = useState<ApiError?>(null);
@@ -20,11 +20,15 @@ FetchHook useFetchCategories() {
     try {
       Uri url = Uri.parse('$appBaseUrl/api/category/random');
       final response = await http.get(url);
-
+      print(response.statusCode);
       if (response.statusCode == 200) {
-            final List<dynamic> jsonData = json.decode(response.body); // decode JSON string to List
+        final List<dynamic> jsonData = json.decode(
+          response.body,
+        ); // decode JSON string to List
 
-        categoriesItems.value = jsonData.map((e) => CategoryModel.fromJson(e)).toList();
+        categoriesItems.value = jsonData
+            .map((e) => CategoryModel.fromJson(e))
+            .toList();
       } else {
         apiError.value = ApiError.fromJson(jsonDecode(response.body));
       }

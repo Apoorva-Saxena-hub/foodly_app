@@ -4,31 +4,32 @@ import 'package:foodly_app/common/app_style.dart';
 import 'package:foodly_app/common/reusable_text.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/controllers/categories_controller.dart';
+import 'package:foodly_app/models/categories.dart';
 import 'package:foodly_app/views/category/allCategories.dart';
 import 'package:get/get.dart';
 
 class CategoryWidget extends StatelessWidget {
-  const CategoryWidget({super.key, required this.category});
+  CategoryWidget({super.key, required this.category});
 
-  final dynamic category;
+  CategoryModel category;
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(CategoriesController());
     return GestureDetector(
       onTap: () {
-        if (controller.categoryValue == category['_id']) {
+        if (controller.categoryValue == category.sId) {
           controller.updateCategory = '';
           controller.updateTitle = '';
-        } else if (category['value'] == 'more') {
+        } else if (category.value == 'more') {
           Get.to(
             () => Allcategories(),
             transition: Transition.fadeIn,
             duration: const Duration(milliseconds: 900),
           );
         } else {
-          controller.updateCategory = category['_id'];
-          controller.updateTitle = category['title'];
+          controller.updateCategory = category.sId.toString();
+          controller.updateTitle = category.title.toString();
         }
       },
       child: Obx(
@@ -39,7 +40,7 @@ class CategoryWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.r),
             border: Border.all(
-              color: controller.categoryValue == category['_id']
+              color: controller.categoryValue == category.sId
                   ? kSecondary
                   : kOffWhite,
               width: 0.5.w,
@@ -51,14 +52,14 @@ class CategoryWidget extends StatelessWidget {
                 height: 35.h,
 
                 child: Image.network(
-                  category['imageUrl'],
+                  category.imageUrl.toString(),
                   errorBuilder: (context, error, stackTrace) {
                     return Image.asset('assets/images/placeholder.png');
                   },
                 ),
               ),
               ReusableText(
-                text: category['title'],
+                text: category.title.toString(),
                 style: appStyle(12, kDark, FontWeight.normal),
               ),
             ],
