@@ -1,29 +1,54 @@
+// To parse this JSON data, do
+//
+//     final categoryModel = categoryModelFromJson(jsonString);
+
+import 'package:meta/meta.dart';
+import 'dart:convert';
+
+List<CategoryModel> categoryModelFromJson(String str) =>
+    List<CategoryModel>.from(
+      json.decode(str).map((x) => CategoryModel.fromJson(x)),
+    );
+
+String categoryModelToJson(List<CategoryModel> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 class CategoryModel {
-  String? sId;
-  String? title;
-  String? value;
-  String? imageUrl;
+  final String id;
+  final String title;
+  final String value;
+  final String imageUrl;
 
   CategoryModel({
-    required this.sId,
+    required this.id,
     required this.title,
     required this.value,
     required this.imageUrl,
   });
 
-  CategoryModel.fromJson(Map<String, dynamic> json) {
-    sId = json['_id'];
-    title = json['title'];
-    value = json['value'];
-    imageUrl = json['imageUrl'];
-  }
+  CategoryModel copyWith({
+    String? id,
+    String? title,
+    String? value,
+    String? imageUrl,
+  }) => CategoryModel(
+    id: id ?? this.id,
+    title: title ?? this.title,
+    value: value ?? this.value,
+    imageUrl: imageUrl ?? this.imageUrl,
+  );
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['_id'] = this.sId;
-    data['title'] = this.title;
-    data['value'] = this.value;
-    data['imageUrl'] = this.imageUrl;
-    return data;
-  }
+  factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
+    id: json["_id"],
+    title: json["title"],
+    value: json["value"],
+    imageUrl: json["imageUrl"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "_id": id,
+    "title": title,
+    "value": value,
+    "imageUrl": imageUrl,
+  };
 }

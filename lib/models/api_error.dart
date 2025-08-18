@@ -1,18 +1,25 @@
+// To parse this JSON data, do
+//
+//     final apiError = apiErrorFromJson(jsonString);
+
+import 'package:meta/meta.dart';
+import 'dart:convert';
+
+ApiError apiErrorFromJson(String str) => ApiError.fromJson(json.decode(str));
+
+String apiErrorToJson(ApiError data) => json.encode(data.toJson());
+
 class ApiError {
-  bool? status;
-  String? message;
+  final bool status;
+  final String message;
 
   ApiError({required this.status, required this.message});
 
-  ApiError.fromJson(Map<String, dynamic> json) {
-    status = json['status'];
-    message = json['message'];
-  }
+  ApiError copyWith({bool? status, String? message}) =>
+      ApiError(status: status ?? this.status, message: message ?? this.message);
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['message'] = this.message;
-    return data;
-  }
+  factory ApiError.fromJson(Map<String, dynamic> json) =>
+      ApiError(status: json["status"], message: json["message"]);
+
+  Map<String, dynamic> toJson() => {"status": status, "message": message};
 }

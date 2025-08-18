@@ -61,7 +61,7 @@ List<dynamic> categories = [
     "title": "More",
     "value": "more",
     "imageUrl":
-        "https://icon-library.com/images/more-icon-png/more-icon-png-16.jpg",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/more.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719653772&Signature=BrC6ABfWN1hKvkM7U9Z8xNFnC1k%3D",
     "__v": 0,
   },
 ];

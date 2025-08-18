@@ -1,15 +1,12 @@
-import 'dart:convert';
-
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/models/api_error.dart';
 import 'package:foodly_app/models/categories.dart';
 import 'package:foodly_app/models/hook_model/hook_result.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 FetchHook useFetchCategories() {
-  final categoriesItems = useState<List<CategoryModel>>([]);
+  final CategoriesItems = useState<List<CategoryModel>?>(null);
   final isLoading = useState<bool>(false);
   final error = useState<Exception?>(null);
   final apiError = useState<ApiError?>(null);
@@ -18,19 +15,14 @@ FetchHook useFetchCategories() {
     isLoading.value = true;
 
     try {
-      Uri url = Uri.parse('$appBaseUrl/api/category/random');
+      Uri url = Uri.parse('$baseUrl/api/category');
       final response = await http.get(url);
       print(response.statusCode);
-      if (response.statusCode == 200) {
-        final List<dynamic> jsonData = json.decode(
-          response.body,
-        ); // decode JSON string to List
 
-        categoriesItems.value = jsonData
-            .map((e) => CategoryModel.fromJson(e))
-            .toList();
+      if (response.statusCode == 200) {
+        CategoriesItems.value = categoryModelFromJson(response.body);
       } else {
-        apiError.value = ApiError.fromJson(jsonDecode(response.body));
+        apiError.value = apiErrorFromJson(response.body);
       }
     } catch (e) {
       error.value = e as Exception;
@@ -50,7 +42,7 @@ FetchHook useFetchCategories() {
   }
 
   return FetchHook(
-    data: categoriesItems.value,
+    data: CategoriesItems.value,
     isLoading: isLoading.value,
     error: error.value,
     refetch: refetch,
