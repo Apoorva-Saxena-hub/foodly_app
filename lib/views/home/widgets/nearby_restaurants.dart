@@ -18,7 +18,7 @@ class NearbyRestaurants extends HookWidget {
     final isLoading = hookResults.isLoading;
 
     return isLoading
-        ? NearbyShimmer()
+        ? const NearbyShimmer()
         : Container(
             height: 190.h,
             padding: EdgeInsets.only(left: 12.w, top: 10.h),
