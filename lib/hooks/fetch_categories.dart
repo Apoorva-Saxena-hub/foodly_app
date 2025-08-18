@@ -15,7 +15,7 @@ FetchHook useFetchCategories() {
     isLoading.value = true;
 
     try {
-      Uri url = Uri.parse('$baseUrl/api/category');
+      Uri url = Uri.parse('$baseUrl/api/category/random');
       final response = await http.get(url);
       print(response.statusCode);
 

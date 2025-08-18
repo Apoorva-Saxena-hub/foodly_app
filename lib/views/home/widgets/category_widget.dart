@@ -54,7 +54,7 @@ class CategoryWidget extends StatelessWidget {
                 child: Image.network(
                   category.imageUrl.toString(),
                   errorBuilder: (context, error, stackTrace) {
-                    return Image.asset('assets/images/placeholder.png');
+                    return Image.asset('assets/foodly/');
                   },
                 ),
               ),

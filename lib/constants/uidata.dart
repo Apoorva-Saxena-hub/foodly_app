@@ -4,7 +4,7 @@ List<dynamic> categories = [
     "title": "Fried Rice",
     "value": "fried_rice",
     "imageUrl":
-        "https://www.jessicagavin.com/wp-content/uploads/2018/09/fried-rice-8-1200.jpg",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/fried%20rice.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719651337&Signature=OLAAucrHwJmYVbU9FU1kLCjhCXE%3D",
     "createdAt": "2023-10-24T16:12:23.571Z",
     "updatedAt": "2023-10-24T16:12:23.571Z",
     "__v": 0,
@@ -14,7 +14,7 @@ List<dynamic> categories = [
     "title": "Curry",
     "value": "curry",
     "imageUrl":
-        "https://tse2.mm.bing.net/th/id/OIP.FUELuQpb7iRIe20qRCRGVwHaK1?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/curry.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719655111&Signature=8KUUHS5KtbSj7B8CCO%2BjZ3pm1ww%3D",
     "__v": 0,
   },
   {
@@ -22,7 +22,8 @@ List<dynamic> categories = [
     "title": "Pizza",
     "value": "pizza",
     "imageUrl":
-        "https://tse2.mm.bing.net/th/id/OIP.NDwh0NwSpDy9l-_ThJBidgHaHA?w=768&h=727&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/pizza.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=360001719654051&Signature=Rkq6AXSm3BNQGtpSRS6eCZL1x8U%3D",
+
     "__v": 0,
   },
   {
@@ -30,7 +31,7 @@ List<dynamic> categories = [
     "title": "Pasta",
     "value": "pasta",
     "imageUrl":
-        "https://foodhub.scene7.com/is/image/woolworthsltdprod/Easy-chicken-and-bacon-pasta:Mobile-1300x1150",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/pasta.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=360001719653659&Signature=zaPFbVa3v6wEhXpB2wAGwk0ZN7w%3D",
     "__v": 0,
   },
   {
@@ -38,7 +39,7 @@ List<dynamic> categories = [
     "title": "Beverages",
     "value": "beverages",
     "imageUrl":
-        "https://tse3.mm.bing.net/th/id/OIP.1O0zxQtamAkxf7OAW0mEkAHaG1?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/beverages.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719651277&Signature=3SqMh5sB4qedlGSdMg3%2BdVCawOk%3D",
     "__v": 0,
   },
   {
@@ -46,14 +47,15 @@ List<dynamic> categories = [
     "title": "Burgers",
     "value": "burgers",
     "imageUrl":
-        "https://brookrest.com/wp-content/uploads/2020/05/AdobeStock_282247995-scaled.jpeg",
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/burgers.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719654978&Signature=NF%2Fc6AvXyKZDUusDYA5DqQXWGWc%3D",
     "__v": 0,
   },
   {
     "_id": "65310efb81e4d98d60b093c3",
     "title": "Chicken",
     "value": "chicken",
-    "imageUrl": "https://images6.alphacoders.com/439/thumb-1920-439410.jpg",
+    "imageUrl":
+        "https://dbestech-code.oss-ap-southeast-1.aliyuncs.com/foodly_flutter/icons/chicken.png?OSSAccessKeyId=LTAI5t8cUzUwGV1jf4n5JVfD&Expires=36001719654407&Signature=6GzanDpMprDwQLEkkvyQDp4Z9Ak%3D",
     "__v": 0,
   },
   {
