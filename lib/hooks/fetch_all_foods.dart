@@ -1,12 +1,13 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:foodly_app/constants/constants.dart';
 import 'package:foodly_app/models/api_error.dart';
+import 'package:foodly_app/models/food.dart';
 import 'package:foodly_app/models/hook_model/hook_result.dart';
 import 'package:foodly_app/models/restaurant.dart';
 import 'package:http/http.dart' as http;
 
-FetchHook useFetchAllRestaurants(String code) {
-  final restaurants = useState<List<RestaurantModel>?>(null);
+FetchHook useFetchAllFoods(String code) {
+  final foods = useState<List<FoodsModel>?>(null);
   final isLoading = useState<bool>(false);
   final error = useState<Exception?>(null);
   final apiError = useState<ApiError?>(null);
@@ -15,12 +16,12 @@ FetchHook useFetchAllRestaurants(String code) {
     isLoading.value = true;
 
     try {
-      Uri url = Uri.parse('$baseUrl/api/restaurant/all/$code');
+      Uri url = Uri.parse('$baseUrl/api/foods/recommendation/$code');
       final response = await http.get(url);
       print(response.statusCode);
 
       if (response.statusCode == 200) {
-        restaurants.value = restaurantModelFromJson(response.body);
+        foods.value = foodsModelFromJson(response.body);
       } else {
         apiError.value = apiErrorFromJson(response.body);
       }
@@ -42,7 +43,7 @@ FetchHook useFetchAllRestaurants(String code) {
   }
 
   return FetchHook(
-    data: restaurants.value,
+    data: foods.value,
     isLoading: isLoading.value,
     error: error.value,
     refetch: refetch,
