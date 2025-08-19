@@ -31,18 +31,18 @@ class Recommendations extends HookWidget {
       ),
       body: BackgroundContainer(
         color: kLightWhite,
-        child: Padding(
-          padding: EdgeInsets.all(12.h),
-          child: isLoading
-              ? const FoodsListShimmer()
-              : ListView(
+        child: isLoading
+            ? const FoodsListShimmer()
+            : Padding(
+                padding: EdgeInsets.all(12.h),
+                child: ListView(
                   scrollDirection: Axis.vertical,
                   children: List.generate(foods!.length, (i) {
                     FoodsModel food = foods[i];
                     return FoodTile(food: food);
                   }),
                 ),
-        ),
+              ),
       ),
     );
   }
