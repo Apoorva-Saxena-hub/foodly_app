@@ -16,7 +16,7 @@ class MyHttpOverrides extends HttpOverrides {
   }
 }
 
-void main() {
+void main() async {
   HttpOverrides.global = MyHttpOverrides();
   runApp(const MyApp());
 }
@@ -37,11 +37,21 @@ class MyApp extends StatelessWidget {
           title: 'Foodly App',
           // You can use the library anywhere in the app even in theme
           theme: ThemeData(
-            scaffoldBackgroundColor: kOffWhite,
-            iconTheme: const IconThemeData(color: kDark),
+            scaffoldBackgroundColor: Colors.white,
+            iconTheme: IconThemeData(color: Color(kDark.value)),
             primarySwatch: Colors.grey,
           ),
-          home: defaultHome,
+          home: FutureBuilder(
+            future: Future.delayed(const Duration(seconds: 2)),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Scaffold(
+                  body: Center(child: CircularProgressIndicator()),
+                );
+              }
+              return MainScreen();
+            },
+          ),
         );
       },
     );
